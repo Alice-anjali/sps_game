@@ -1,0 +1,43 @@
+body{
+  color : black;
+  font-size : 40px;
+  width: 20%;
+  margin: 0 auto;
+  background-color: lightblue;
+}
+
+#name{
+  color : red;
+  font-size : 20px;
+}
+
+#chars{
+  color : red;
+  font-size : 70px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+#choice{
+  color : green;
+  font-size : 40px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+
+.butn{
+    width: 250px;
+    padding: 10px;
+    margin: 2;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box; /* reset */
+}
+html, body {
+    width: 100%; /* specify width on parent */
+}
+html {
+  text-align: center;
+}

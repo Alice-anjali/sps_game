@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stone-Paper-Scissor</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="jquery.js"></script>
+  </head>
+  <body>
+    <br>
+    <br>
+    Choose any one:-
+    <br>
+    <br>
+
+    <button id = 'stone' type="button" name="button" class="butn">Stone</button>
+    <button id = 'paper' type="button" name="button" class="butn">Paper</button>
+    <button id = 'scissor' type="button" name="button" class="butn">Scissor</button>
+    <br>
+    <br>
+    <div id="choice">
+
+    </div>
+    <br>
+    <div id = "chars">
+
+    </div>
+
+    <script>
+
+    function sendDataToServer(n){
+      var obj = {
+        name : n
+      }
+      $.ajax({
+        url : "/compete",
+        data : obj,
+        method : 'post',
+        success : function(result){
+          $('#choice').html(result.user+"<br>"+result.comp);
+          $('#chars').html(result.final_result);
+        }
+      });
+    }
+
+    $('#stone').click(function(){
+        sendDataToServer(0);
+    });
+    $('#paper').click(function(){
+        sendDataToServer(1);
+    });
+    $('#scissor').click(function(){
+      sendDataToServer(2);
+    });
+
+  </script>
+  </body>
+</html>
