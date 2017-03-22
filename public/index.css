@@ -25,11 +25,19 @@ body{
   margin: 0 auto;
 }
 
+#score{
+  color : black;
+  font-size : 30px;
+  width: 50%;
+  margin: 0 auto;
+}
+
 
 .butn{
     width: 250px;
     padding: 10px;
     margin: 2;
+    cursor: pointer;
 }
 
 * {
